@@ -25,8 +25,6 @@ async function fetchData() {
     const data = await result.json();
 
     let iconWeather = document.querySelector(".weather_icon");
-    let weatherText = data.current.condition.text;
-    iconWeather.src = `src/image/${weatherText}.png`;
 
     let currentTemp = document.querySelector(".temp_c");
     let rightTemp = `${data.current.temp_c}`;
