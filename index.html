@@ -14,24 +14,42 @@
             <div class="header-app">
                 <h1>WeatherApp</h1>
                 <div class="header-form">
-                    <input class="header-input" id="country" type="text" value="" placeholder="Write City here..."/>
+                    <input class="header-input" id="city" type="text" value="" placeholder="Write City here..."/>
                     <button class="header-btn" type="submit" onClick="fetchData()">Check Weather!</button>
                 </div>
             </div>
             <div class="displayWeather">
                 <div class="app">
-                    <img
-                        src="src/image/default.png"
-                        alt="weather_icon"
-                        class="weather_icon"
-                    />
-                   <h3 class="temp_c"></h3>
-                   <h4 class="city_current"></h4>
-                   <p class="time_current"></p>
-                <div>
+                    <div class="app_top">
+                        <div class="app_icon">
+                            <img
+                            src="src/image/day/113.png"
+                            alt="weather_icon"
+                            class="weather_icon"
+                        />
+                        </div>
+                        <div class="app_first-data">
+                            <div class="app_city-country">
+                                <h4 class="city_current">Your city</h4>
+                                <h4 class="country_current">Your country</h4>
+                            </div>
+                            <div class="app_temperature-data">
+                                <div class="app_temperature">
+                                    <h3 class="temp_c">+50</h3>
+                                    <h5 class="feelslike_c">+60</h5>
+                                </div>
+                                <!-- <h4 class="weather_text">sunny</h4> -->
+                                <p class="lastUpdate">19:00</p>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="app_another-data">
+                        <p class="humidity"></p>
+                        <p class="cloud"></p>
+                        <p class="wind_kph"></p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <script src="src/script/script.js"></script>
+    <script src="src/script/index.js"></script>
 </body>
 </html>
