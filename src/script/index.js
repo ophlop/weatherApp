@@ -39,9 +39,9 @@ async function fetchData() {
 
     let currentFeelsTemp = document.querySelector(".feelslike_c");
     let rightFeelsTemp = `${data.current.feelslike_c}`;
-    currentFeelsTemp.innerHTML = `Feels Like: ${rightFeelsTemp[0]}` == "-" ?
-        `${rightFeelsTemp} °С` :
-        `+${rightFeelsTemp} °С`;
+    currentFeelsTemp.innerHTML = `${rightFeelsTemp[0]}` == "-" ?
+        `Feels Like: ${rightFeelsTemp} °С` :
+        `Feels Like: +${rightFeelsTemp} °С`;
 
 
     let weatherText = document.querySelector(".weather_text");
@@ -49,14 +49,20 @@ async function fetchData() {
 
 
     let currentTime = document.querySelector(".lastUpdate");
-    currentTime.innerHTML = `${data.current.last_updated}`;
+    currentTime.innerHTML = `Last Update: ${data.current.last_updated}`;
 
 
-    let appTop = document.querySelector(".app_top");
-    appTop.append(
-        iconWeather, currentCity, currentCountry,
-        currentTemp, currentFeelsTemp, currentTime);
+    let appIcon = document.querySelector(".app_weather-icon");
+    appIcon.append(iconWeather, weatherText)
 
+    let appFirstData = document.querySelector(".app_city-country");
+    appFirstData.append(currentCity, currentCountry);
+
+    let appTempData = document.querySelector(".app_temperature");
+    appTempData.append(currentTemp, currentFeelsTemp);
+
+    let appUpdateData = document.querySelector(".app_temperature-info");
+    appUpdateData.append(currentTime);
 
     let currentHumidity = document.querySelector(".humidity");
     currentHumidity.innerHTML = `${data.current.humidity}%`; 
@@ -74,9 +80,12 @@ async function fetchData() {
     let currentWind = document.querySelector(".wind_kph");
     currentWind.innerHTML = `${data.current.wind_kph} kph`;
 
+    let appHumidity = document.querySelector(".app_humidity-data");
+    appHumidity.append(currentHumidity);
 
-    let appAnother = document.querySelector(".app_another-data");
-    appAnother.append(
-        currentHumidity, currentCloud, currentWind
-    );
+    let appCloud = document.querySelector(".app_cloud-data");
+    appCloud.append(currentCloud);
+
+    let appWind = document.querySelector(".app_wind-data");
+    appWind.append(currentWind);
 }
