@@ -73,7 +73,7 @@ async function fetchData() {
     currentCloud.innerHTML = `${cloud}%(${
         0 < cloud && cloud < 25 ? 'clear sky' :
         25 <= cloud && cloud < 50 ? 'partly cloudy' :
-        50 <= cloud && cloud < 75 ? 'cloudy with clarifications' :
+        50 <= cloud && cloud < 75 ? 'overcast' :
         'cloudy'})`;
 
 
