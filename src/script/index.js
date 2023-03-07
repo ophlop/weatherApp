@@ -80,6 +80,8 @@ window.onload = async function() {
     appWind.append(currentWind);
 
     sessionStorage.setItem('name', data.location.name)
+    sessionStorage.setItem('temp', rightTemp)
+    sessionStorage.setItem('weather', data.current.condition.text)
 }
 
 async function fetchData() {
@@ -159,16 +161,31 @@ async function fetchData() {
     appWind.append(currentWind);
 
     sessionStorage.setItem('name', data.location.name)
+    sessionStorage.setItem('temp', rightTemp)
+    sessionStorage.setItem('weather', data.current.condition.text)
 }
 
 const btnFunc = document.querySelector(".header-btn")
 
 btnFunc.addEventListener('click', function() {
-    console.log(sessionStorage.name)
-    // if (sessionStorage.name !== 'undefined') {
-        let divRenderStore = document.querySelector('.oldResult')
-        let localName = document.createElement('h2')
-        localName.innerHTML = `${sessionStorage.name}`
-        divRenderStore.append(localName)
-    // }
+    let divRenderResult = document.querySelector('.oldResult') 
+    let divRenderStore = document.createElement('div')
+    divRenderStore.classList.add('renderStore')
+
+    let localName = document.createElement('h2')
+    localName.classList.add('localName')
+
+    let localTemp = document.createElement('h2')
+    localTemp.classList.add('localTemp')
+
+    let localWeather = document.createElement('h2')
+    localWeather.classList.add('localWeather')
+
+    localName.innerHTML = `${sessionStorage.name}`
+    localTemp.innerHTML = `${sessionStorage.temp}`
+    localWeather.innerHTML = `${sessionStorage.weather}`
+
+    divRenderStore.append(localName, localTemp, localWeather)
+
+    divRenderResult.append(divRenderStore)
 })
