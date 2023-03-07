@@ -78,6 +78,8 @@ window.onload = async function() {
 
     let appWind = document.querySelector(".app_wind-data");
     appWind.append(currentWind);
+
+    sessionStorage.setItem('name', data.location.name)
 }
 
 async function fetchData() {
@@ -155,5 +157,18 @@ async function fetchData() {
 
     let appWind = document.querySelector(".app_wind-data");
     appWind.append(currentWind);
+
+    sessionStorage.setItem('name', data.location.name)
 }
 
+const btnFunc = document.querySelector(".header-btn")
+
+btnFunc.addEventListener('click', function() {
+    console.log(sessionStorage.name)
+    // if (sessionStorage.name !== 'undefined') {
+        let divRenderStore = document.querySelector('.oldResult')
+        let localName = document.createElement('h2')
+        localName.innerHTML = `${sessionStorage.name}`
+        divRenderStore.append(localName)
+    // }
+})
