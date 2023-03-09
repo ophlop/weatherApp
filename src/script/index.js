@@ -14,11 +14,9 @@ window.onload = async function() {
 
     let iconWeather = document.querySelector(".weather_icon");
     let icon = `${data.current.condition.icon}`    
-        if (data.current.is_day == 1) {
-            iconWeather.src = `./src/image/day/${icon.slice(icon.length - 7)}`
-        } else {
+    let rightIcon = data.current.is_day == 1 ?
+            iconWeather.src = `./src/image/day/${icon.slice(icon.length - 7)}` :
             iconWeather.src = `./src/image/night/${icon.slice(icon.length - 7)}`
-        }
 
     let currentCity = document.querySelector(".city_current");
     currentCity.innerHTML = `${data.location.name}`;
@@ -28,7 +26,7 @@ window.onload = async function() {
 
     let currentTemp = document.querySelector(".temp_c");
     let rightTemp = `${data.current.temp_c}`;
-    currentTemp.innerHTML = `${rightTemp[0]}` == "-" ?
+    let tempCurrent = currentTemp.innerHTML = `${rightTemp[0]}` == "-" ?
         `${rightTemp} °С` :
         `+${rightTemp} °С`;
 
@@ -80,8 +78,9 @@ window.onload = async function() {
     appWind.append(currentWind);
 
     sessionStorage.setItem('name', data.location.name)
-    sessionStorage.setItem('temp', rightTemp)
+    sessionStorage.setItem('temp', tempCurrent)
     sessionStorage.setItem('weather', data.current.condition.text)
+    sessionStorage.setItem('icon', rightIcon)
 }
 
 async function fetchData() {
@@ -95,11 +94,9 @@ async function fetchData() {
 
     let iconWeather = document.querySelector(".weather_icon");
     let icon = `${data.current.condition.icon}`    
-        if (data.current.is_day == 1) {
-            iconWeather.src = `./src/image/day/${icon.slice(icon.length - 7)}`
-        } else {
+    let rightIcon = data.current.is_day == 1 ?
+            iconWeather.src = `./src/image/day/${icon.slice(icon.length - 7)}` :
             iconWeather.src = `./src/image/night/${icon.slice(icon.length - 7)}`
-        }
 
     let currentCity = document.querySelector(".city_current");
     currentCity.innerHTML = `${data.location.name}`;
@@ -109,7 +106,7 @@ async function fetchData() {
 
     let currentTemp = document.querySelector(".temp_c");
     let rightTemp = `${data.current.temp_c}`;
-    currentTemp.innerHTML = `${rightTemp[0]}` == "-" ?
+    let tempCurrent = currentTemp.innerHTML = `${rightTemp[0]}` == "-" ?
         `${rightTemp} °С` :
         `+${rightTemp} °С`;
 
@@ -161,8 +158,10 @@ async function fetchData() {
     appWind.append(currentWind);
 
     sessionStorage.setItem('name', data.location.name)
-    sessionStorage.setItem('temp', rightTemp)
+    sessionStorage.setItem('temp', tempCurrent)
     sessionStorage.setItem('weather', data.current.condition.text)
+    sessionStorage.setItem('icon', rightIcon)
+
 }
 
 const btnFunc = document.querySelector(".header-btn")
@@ -173,6 +172,9 @@ btnFunc.addEventListener('click', function() {
 
     let divRenderStore = document.createElement('div')
     divRenderStore.classList.add('renderStore')
+
+    let localIcon = document.createElement('img')
+    localIcon.classList.add('localIcon')
 
     let localName = document.createElement('h2')
     localName.classList.add('localName')
@@ -186,8 +188,9 @@ btnFunc.addEventListener('click', function() {
     localName.innerHTML = `${sessionStorage.name}`
     localTemp.innerHTML = `${sessionStorage.temp}`
     localWeather.innerHTML = `${sessionStorage.weather}`
+    localIcon.src = `${sessionStorage.icon}`
 
-    divRenderStore.append(localName, localTemp, localWeather)
+    divRenderStore.append(localIcon, localName, localTemp, localWeather)
 
     divRenderResult.append(divRenderStore)
 })
