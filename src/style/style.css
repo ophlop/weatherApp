@@ -380,6 +380,10 @@ h1 {
     border-radius: 30px;
 }
 
+.noneActive {
+    display: none !important;
+}
+
 .renderStore {
     width: 96%;
     position: relative;

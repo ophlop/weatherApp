@@ -168,7 +168,9 @@ async function fetchData() {
 const btnFunc = document.querySelector(".header-btn")
 
 btnFunc.addEventListener('click', function() {
-    let divRenderResult = document.querySelector('.oldResult') 
+    let divRenderResult = document.querySelector('.oldResult')
+    divRenderResult.classList.remove('noneActive')
+
     let divRenderStore = document.createElement('div')
     divRenderStore.classList.add('renderStore')
 
