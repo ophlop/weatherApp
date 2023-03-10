@@ -1,0 +1,260 @@
+:root {
+    --bg-color: rgb(147 197 253);
+    --primary-color: rgb(59 130 246);
+    --active-color: rgb(30 58 138);
+    --gray-color: rgb(236, 236, 236);
+    --white-color: rgb(255, 255, 255);
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #e0e5ec;
+    place-items: center;
+    font-family: "Baloo Thambi 2", cursive !important;
+    height: 100vh;
+}
+
+.app {
+    height: 100%;
+    max-width: 1000px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 6rem;
+    font-weight: 500;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.emboss {
+    background: #e0e5ec;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgb(195 193 198 / 90%),
+        -0.2rem -0.2rem 0.4rem #fff;
+    border-radius: 1.2rem;
+}
+
+.text-emboss {
+    background: #9baacf;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(17, 16, 16, 0.25) 1px 2px 1px;
+}
+
+.alt-emboss {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem rgb(195 193 198 / 90%),
+        inset -0.2rem -0.2rem 0.5rem #fff,
+        0.3rem 0.3rem 0.5rem rgb(195 193 198 / 90%), -0.2rem -0.2rem 0.4rem #fff;
+    border-radius: 1.2rem;
+    align-items: center;
+}
+
+.bg-style {
+    padding: 1rem 1rem 2rem 1rem;
+    border-radius: 1.2rem;
+    background: #e0e5ec;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgb(195 193 198 / 90%),
+        -0.2rem -0.2rem 0.4rem #fff;
+}
+
+.app-search {
+    margin-bottom: 40px;
+    height: fit-content;
+}
+
+.app-display {
+    gap: 40px;
+}
+
+.app-display,
+.app-search {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.searchForm {
+    width: 100%;
+    height: 70px;
+    display: inline-flex;
+}
+
+.search-input {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem rgb(195 193 198 / 90%),
+        inset -0.2rem -0.2rem 0.5rem #fff;
+    background: #e0e5ec;
+    border: none;
+    border-radius: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 1rem;
+    height: 50px;
+    width: 100%;
+}
+
+.iconInput {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: flex;
+    margin-right: 20px;
+}
+
+.searchCity {
+    width: 70%;
+    height: 30px;
+    position: relative;
+    display: flex;
+    margin-right: 20px;
+    background-color: transparent;
+    border: 0;
+    color: #9baacf;
+    font-size: 22px;
+    font-weight: 500;
+    outline: none;
+}
+
+.search-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    border-radius: 1.2rem;
+    padding: 8px 10px;
+    transition: all 260ms ease;
+    text-decoration: none;
+    font-size: 20px;
+    width: 30%;
+    height: 60px;
+    color: #9baacf;
+    background: #e0e5ec;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgb(195 193 198 / 90%),
+        -0.2rem -0.2rem 0.4rem #fff;
+}
+
+.search-btn:hover {
+    color: #e0e5ec;
+    background: #ff7025;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem #f8b639,
+        inset -0.2rem -0.2rem 0.5rem #ff4c00,
+        0.3rem 0.3rem 0.5rem rgb(195 193 198 / 90%), -0.2rem -0.2rem 0.4rem #fff;
+}
+
+.mainSide {
+    width: 60%;
+    height: 320px;
+}
+
+.historySide {
+    width: 40%;
+    height: 320px;
+}
+
+.main {
+    width: 100%;
+    display: inline-flex;
+    gap: 18px;
+}
+
+.icon-header {
+    width: 22%;
+    height: 200px;
+    padding: 20px 10px 0px;
+    align-items: center;
+}
+
+.icon-weather {
+    width: 102px;
+    height: auto;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-weather {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 24px;
+    color: #9baacf;
+    text-align: center;
+}
+
+.titleInfo-header {
+    width: 80%;
+    height: 200px;
+    padding-right: 10px;
+}
+
+.titleInfo_city {
+    width: 90%;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 20px;
+    padding: 20px 18px;
+    margin-bottom: 20px;
+}
+
+.primary-text {
+    font-size: 30px;
+    font-weight: 500;
+    color: #9baacf;
+}
+
+.sub-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #9baacf;
+    opacity: 0.6;
+}
+
+.titleInfo_temp {
+    width: 90%;
+    height: 30px;
+    padding: 20px 18px;
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 20px;
+}
+
+.titleInfo_time {
+    width: 90%;
+    height: 18px;
+    padding: 12px 18px 10px;
+    border-radius: 10px;
+}
+
+.lastUpdate {
+    font-size: 14px;
+    font-weight: 500;
+    color: #9baacf;
+    opacity: 0.6;
+}
+
+.footer {
+    margin-top: 18px;
+    width: 90%;
+    height: 70px;
+    padding: 12px 20px 10px;
+    gap: 20px;
+}
+
+.plus-data {
+    font-size: 22px;
+}
+
+.p-text {
+    font-size: 22px;
+    font-weight: 500;
+    color: #9baacf;
+}
+
+.app_humidity-data,
+.app_cloud-data,
+.app_wind-data {
+    width: 33%;
+}
