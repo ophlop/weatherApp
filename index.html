@@ -1,68 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style/reset.css">
-    <link rel="stylesheet" href="src/style/style.css">
-    <title>WeatherApp</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style/reset.css" />
+    <link rel="stylesheet" href="src/style/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <title>Document</title>
 </head>
+
 <body>
-        <div class="weather-app">
-            <div class="header-app">
-                <h1>WeatherApp</h1>
-                <div class="header-form">
-                    <input class="header-input" id="city" type="text" value="" placeholder="Write City here..."/>
-                    <button class="header-btn" type="submit" onClick="fetchData()">Check Weather!</button>
+    <div class="app">
+        <h1 class="title text-emboss">Weather App</h1>
+        <div class="app-search">
+            <div class="searchForm bg-style">
+                <div class="search-input">
+                    <img class="iconInput" src="/src/image/finder.svg" alt="icon_finder" />
+                    <input type="text" id="searchCity" class="searchCity" placeholder="Enter city name" />
+                    <button type="submit" class="search-btn" onclick="fetchData()">
+                        Show me!
+                    </button>
                 </div>
             </div>
-            <div class="displayWeather">
-                <div class="app">
-                        <div class="app_weather-icon">
-                            <img
-                                src=""
-                                alt="weather_icon"
-                                class="weather_icon"
-                            />
-                            <h4 class="weather_text"></h4>
+        </div>
+        <div class="app-display">
+            <div class="mainSide bg-style">
+                <div class="main header">
+                    <div class="icon-header emboss">
+                        <img class="icon-weather" src="/src/image/day/113.png" alt="icon" />
+                        <h4 class="text-weather"></h4>
+                    </div>
+                    <div class="titleInfo-header">
+                        <div class="titleInfo_city emboss">
+                            <h4 class="city_current primary-text"></h4>
+                            <h4 class="country_current sub-text"></h4>
                         </div>
-                        <div class="app_top">
-                            <div class="app_first-data">
-                                <div class="app_city-country">
-                                    <h4 class="city_current"></h4>
-                                    <h4 class="country_current"></h4>
-                                </div>
-                                <div class="app_temperature-data">
-                                    <div class="app_temperature">
-                                        <h3 class="temp_c"></h3>
-                                        <h5 class="feelslike_c"></h5> 
-                                    </div>
-                                </div>
-                                <div class="app_temperature-info">
-                                    <span class="lastUpdate"></span>
-                                </div>
-                            </div>
+                        <div class="titleInfo_temp emboss">
+                            <h3 class="temp_c primary-text"></h3>
+                            <h5 class="feelslike_c sub-text"></h5>
                         </div>
+                        <div class="titleInfo_time emboss">
+                            <span class="lastUpdate"> </span>
+                        </div>
+                    </div>
                 </div>
-                <div class="app_another-data">
+                <div class="main footer emboss">
                     <div class="app_humidity-data">
-                        <h4>Humidity:</h4>
-                        <p class="humidity"></p>
+                        <h4 class="plus-data sub-text">Humidity:</h4>
+                        <p class="humidity p-text">Cloud:</p>
                     </div>
                     <div class="app_cloud-data">
-                        <h4>Cloud:</h4>
-                        <p class="cloud"></p>
+                        <h4 class="plus-data sub-text">Cloud:</h4>
+                        <p class="cloud p-text">Cloud:</p>
                     </div>
                     <div class="app_wind-data">
-                        <h4>Wind:</h4>
-                        <p class="wind_kph"></p>
+                        <h4 class="plus-data sub-text">Wind:</h4>
+                        <p class="wind_kph p-text">Cloud:</p>
                     </div>
                 </div>
             </div>
+            <div class="historySide displayClearHistory bg-style">
+                <div class="renderHistory clearHistory alt-emboss">
+                    <h1 class="clearText primary-text">
+                        Search history is empty
+                    </h1>
+                </div>
+            </div>
         </div>
-        <div class="oldResult noneActive">
-        </div>
+    </div>
+    </div>
+    </div>
     <script src="src/script/index.js"></script>
 </body>
+
 </html>
