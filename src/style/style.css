@@ -92,6 +92,7 @@ body {
     padding: 1rem 1rem;
     height: 50px;
     width: 100%;
+    gap: 20px;
 }
 
 .iconInput {
@@ -99,7 +100,6 @@ body {
     height: 30px;
     position: relative;
     display: flex;
-    margin-right: 20px;
 }
 
 .searchCity {
@@ -116,7 +116,15 @@ body {
     outline: none;
 }
 
+.reset-btn {
+    width: 8%;
+}
+
 .search-btn {
+    width: 30%;
+}
+
+.btn {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -128,7 +136,6 @@ body {
     transition: all 260ms ease;
     text-decoration: none;
     font-size: 20px;
-    width: 30%;
     height: 60px;
     color: #9baacf;
     background: #e0e5ec;
@@ -136,7 +143,7 @@ body {
         -0.2rem -0.2rem 0.4rem #fff;
 }
 
-.search-btn:hover {
+.btn:hover {
     color: #e0e5ec;
     background: #ff7025;
     box-shadow: inset 0.2rem 0.2rem 0.5rem #f8b639,
@@ -177,7 +184,7 @@ body {
 }
 
 .text-weather {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 500;
     margin-top: 24px;
     color: #9baacf;
@@ -261,14 +268,30 @@ body {
 }
 
 .renderHistory {
-    /* background-color: #f8b639; */
     width: 90%;
     height: 90%;
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto;
-
 }
+
+.renderHistory::-webkit-scrollbar {
+    width: 10px;
+}
+
+.renderHistory::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.renderHistory::-webkit-scrollbar-thumb {
+    background: #9baacf;
+    border-radius: 4px;
+}
+
+.renderHistory::-webkit-scrollbar-thumb:hover {
+    background: #ff7025;
+    
+  }
 
 .displayClearHistory {
     display: flex;
