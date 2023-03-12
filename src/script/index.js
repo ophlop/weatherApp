@@ -92,6 +92,10 @@ window.onload = async function () {
     sessionStorage.setItem("icon", rightIcon);
 };
 
+function resetInput() {
+    document.querySelector(".searchCity").value = ""
+}
+
 async function fetchData() {
     let city = document.querySelector(".searchCity").value;
 
