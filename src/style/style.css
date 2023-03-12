@@ -103,17 +103,24 @@ body {
 }
 
 .searchCity {
-    width: 70%;
+    width: 60%;
     height: 30px;
     position: relative;
     display: flex;
-    margin-right: 20px;
     background-color: transparent;
     border: 0;
     color: #9baacf;
     font-size: 22px;
     font-weight: 500;
     outline: none;
+}
+
+.noResult {
+    position: relative;
+    width: 110px;
+    color:#ff4c00;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .reset-btn {
