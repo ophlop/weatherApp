@@ -1,0 +1,147 @@
+@media (max-width:1010px) {
+    body {
+        height: fit-content;
+    }
+
+    .searchForm {
+        height: 134px;
+        width: 100%;
+        display: block;
+    }
+
+    .search-input {
+        display: block;
+        position: relative;
+        height: 120px;
+        width: 94%;
+    }
+
+    .search {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    .app-display {
+        display: block;
+    }
+
+    .mainSide, .historySide {
+        width: 94.5%;
+    }
+
+    .mainSide {
+        margin-bottom: 40px;
+    }
+
+    .titleInfo_city,
+    .titleInfo_temp,
+    .titleInfo_time {
+        width: 92%;
+    }
+
+    .footer {
+        width: 92%;
+    }
+
+    .historySide {
+        margin-bottom: 60px !important;
+    }
+
+    .renderHistory {
+        width: 92%;
+    }
+
+    .historyCard {
+        width: 97%;
+    }
+}
+
+@media (max-width:550px) {
+    .app {
+        width: 90%;
+    }
+
+    .title {
+        font-size: 50px;
+        margin: 40px auto;
+    }
+
+    .search-input {
+        width: 90%;
+    }
+
+    .mainSide, .historySide {
+        width: 90%;
+    }
+
+    .mainSide {
+        padding-bottom: 16px;
+        height: fit-content;
+    }
+
+    .header {
+        display: block;
+    }
+
+    .icon-header {
+        width: 100%;
+        height: 80px;
+        display: inline-flex;
+        padding: 0;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .icon-weather {
+        width: auto;
+        height: 100px;
+        display: flex;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+
+    .text-weather {
+        margin-top: 0;
+    }
+
+    .titleInfo-header {
+        width: 100%;
+        padding: 0;
+    }
+
+    .titleInfo_city,
+    .titleInfo_temp,
+    .titleInfo_time {
+        width: 94%;
+        padding: 14px 10px;
+    }
+    
+    .footer {
+        padding: 14px 10px;
+        height: fit-content;
+    }
+
+    .plus-data {
+        font-size: 16px;
+    }
+
+    .p-text {
+        font-size: 18px;
+    }
+
+    .card_icon {
+        width: 40px;
+    }
+
+    .card_temp {
+        width: 40%;
+    }
+
+    .card_temp, .card_weather {
+        font-size: 14px;
+    }
+}
