@@ -1,14 +1,6 @@
-:root {
-    --bg-color: rgb(147 197 253);
-    --primary-color: rgb(59 130 246);
-    --active-color: rgb(30 58 138);
-    --gray-color: rgb(236, 236, 236);
-    --white-color: rgb(255, 255, 255);
-}
-
 body {
     box-sizing: border-box;
-    background-color: #e0e5ec;
+    background-color: var(--bg-color);
     place-items: center;
     font-family: "Baloo Thambi 2", cursive !important;
     height: 100vh;
@@ -29,14 +21,14 @@ body {
 }
 
 .emboss {
-    background: #e0e5ec;
-    box-shadow: 0.3rem 0.3rem 0.5rem rgb(195 193 198 / 90%),
-        -0.2rem -0.2rem 0.4rem #fff;
+    background: var(--bg-color);
+    box-shadow: 0.3rem 0.3rem 0.5rem var(--gray-color),
+        -0.2rem -0.2rem 0.4rem var(--white-color);
     border-radius: 1.2rem;
 }
 
 .text-emboss {
-    background: #9baacf;
+    background: var(--text-blue-color);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -44,9 +36,9 @@ body {
 }
 
 .alt-emboss {
-    box-shadow: inset 0.2rem 0.2rem 0.5rem rgb(195 193 198 / 90%),
-        inset -0.2rem -0.2rem 0.5rem #fff,
-        0.3rem 0.3rem 0.5rem rgb(195 193 198 / 90%), -0.2rem -0.2rem 0.4rem #fff;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--gray-color),
+        inset -0.2rem -0.2rem 0.5rem var(--white-color),
+        0.3rem 0.3rem 0.5rem var(--gray-color), -0.2rem -0.2rem 0.4rem var(--white-color);
     border-radius: 1.2rem;
     align-items: center;
 }
@@ -54,9 +46,9 @@ body {
 .bg-style {
     padding: 1rem 1rem 2rem 1rem;
     border-radius: 1.2rem;
-    background: #e0e5ec;
-    box-shadow: 0.3rem 0.3rem 0.5rem rgb(195 193 198 / 90%),
-        -0.2rem -0.2rem 0.4rem #fff;
+    background: var(--bg-color);
+    box-shadow: 0.3rem 0.3rem 0.5rem var(--gray-color),
+        -0.2rem -0.2rem 0.4rem var(--white-color);
 }
 
 .app-search {
@@ -96,9 +88,9 @@ body {
 }
 
 .search-input {
-    box-shadow: inset 0.2rem 0.2rem 0.5rem rgb(195 193 198 / 90%),
-        inset -0.2rem -0.2rem 0.5rem #fff;
-    background: #e0e5ec;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--gray-color),
+        inset -0.2rem -0.2rem 0.5rem var(--white-color);
+    background: var(--bg-color);
     border: none;
     border-radius: 1.2rem;
     display: inline-flex;
@@ -123,7 +115,7 @@ body {
     display: flex;
     background-color: transparent;
     border: 0;
-    color: #9baacf;
+    color: var(--text-blue-color);
     font-size: 22px;
     font-weight: 500;
     outline: none;
@@ -132,7 +124,7 @@ body {
 .noResult {
     position: relative;
     width: 110px;
-    color:#ff4c00;
+    color: var(--orange-pr-color);
     font-size: 20px;
     font-weight: 500;
 }
@@ -158,18 +150,18 @@ body {
     text-decoration: none;
     font-size: 20px;
     height: 60px;
-    color: #9baacf;
-    background: #e0e5ec;
-    box-shadow: 0.3rem 0.3rem 0.5rem rgb(195 193 198 / 90%),
-        -0.2rem -0.2rem 0.4rem #fff;
+    color: var(--text-blue-color);
+    background: var(--bg-color);
+    box-shadow: 0.3rem 0.3rem 0.5rem var(--gray-color),
+        -0.2rem -0.2rem 0.4rem var(--white-color);
 }
 
 .btn:hover {
-    color: #e0e5ec;
-    background: #ff7025;
-    box-shadow: inset 0.2rem 0.2rem 0.5rem #f8b639,
-        inset -0.2rem -0.2rem 0.5rem #ff4c00,
-        0.3rem 0.3rem 0.5rem rgb(195 193 198 / 90%), -0.2rem -0.2rem 0.4rem #fff;
+    color: var(--bg-color);
+    background: var(--orange-color);
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--yellow-color),
+        inset -0.2rem -0.2rem 0.5rem var(--orange-pr-color),
+        0.3rem 0.3rem 0.5rem var(--gray-color), -0.2rem -0.2rem 0.4rem var(--white-color);
 }
 
 .mainSide {
@@ -208,7 +200,7 @@ body {
     font-size: 20px;
     font-weight: 500;
     margin-top: 24px;
-    color: #9baacf;
+    color: var(--text-blue-color);
     text-align: center;
 }
 
@@ -230,13 +222,13 @@ body {
 .primary-text {
     font-size: 30px;
     font-weight: 500;
-    color: #9baacf;
+    color: var(--text-blue-color);
 }
 
 .sub-text {
     font-size: 18px;
     font-weight: 500;
-    color: #9baacf;
+    color: var(--text-blue-color);
     opacity: 0.6;
 }
 
@@ -260,7 +252,7 @@ body {
 .lastUpdate {
     font-size: 14px;
     font-weight: 500;
-    color: #9baacf;
+    color: var(--text-blue-color);
     opacity: 0.6;
 }
 
@@ -279,7 +271,7 @@ body {
 .p-text {
     font-size: 22px;
     font-weight: 500;
-    color: #9baacf;
+    color: var(--text-blue-color);
 }
 
 .app_humidity-data,
@@ -305,12 +297,12 @@ body {
 }
 
 .renderHistory::-webkit-scrollbar-thumb {
-    background: #9baacf;
+    background: var(--text-blue-color);
     border-radius: 4px;
 }
 
 .renderHistory::-webkit-scrollbar-thumb:hover {
-    background: #ff7025;
+    background: var(--orange-color);
   }
 
 .displayClearHistory {
@@ -355,7 +347,7 @@ body {
 .card_city, .card_temp, .card_weather {
     font-size: 20px;
     font-weight: 500;
-    color: #9baacf;
+    color: var(--text-blue-color);
 }
 
 .cardTempInfo {
